@@ -1,4 +1,4 @@
 <?php
-$cmd = 'set';
-echo "<pre>".shell_exec($cmd)."</pre>";
+$output = shell_exec('git help');
+echo "<pre>$output</pre>";
 ?>
