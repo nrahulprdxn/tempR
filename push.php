@@ -13,9 +13,10 @@ function pull ( )
 {
 
   return shell_exec('git pull');
-   shell_exec('git status');
+   
 
 }
 
 echo "<pre>" . pull() . "</pre>";
+echo shell_exec('git status');
 ?>
