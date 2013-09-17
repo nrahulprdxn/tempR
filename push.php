@@ -11,7 +11,7 @@
  
 function pull ( )
 {
-
+wht p
   return shell_exec('git pull origin master');
    
 
