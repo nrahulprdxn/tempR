@@ -12,7 +12,7 @@
 function pull ( )
 {
 
-  shell_exec('git pull 2>&1');
+  shell_exec('git pull');
   return shell_exec('git status');
 
 }
