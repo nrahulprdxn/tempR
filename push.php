@@ -10,7 +10,7 @@
  
 function pull ( )
 {
-return shell_exec('git pull');
+return shell_exec('sudo git pull');
 }
 
 echo pull();
