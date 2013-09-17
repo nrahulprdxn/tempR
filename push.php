@@ -10,8 +10,11 @@
  
 function pull ( )
 {
-return shell_exec('sudo git pull');
+
+  shell_exec('git pull');
+  return shell_exec('git status');
+
 }
 
-echo pull();
+echo "<pre>" . pull() . "</pre>";
 ?>
