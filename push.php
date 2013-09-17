@@ -12,11 +12,12 @@
 function pull ( )
 {
 
-  return shell_exec('git pull');
+  return shell_exec('git pull origin master');
    
 
 }
 
-echo "<pre>" . pull() . "</pre>";
-echo shell_exec('git status');
+echo "<pre>" . pull() ;
+echo shell_exec('git status')
+. "</pre>";
 ?>
