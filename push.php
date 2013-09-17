@@ -1,4 +1,4 @@
-#!php
+#!php -q
 <?php 
 /**
 * Git Pull
@@ -12,8 +12,8 @@
 function pull ( )
 {
 
-  shell_exec('git pull');
-  return shell_exec('git status');
+  return shell_exec('git pull');
+   shell_exec('git status');
 
 }
 
