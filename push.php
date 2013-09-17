@@ -1,4 +1,4 @@
-<?php 
-  echo shell_exec("git Status");
-  echo "Code deployed";
+<?php
+$cmd = 'set';
+echo "<pre>".shell_exec($cmd)."</pre>";
 ?>
