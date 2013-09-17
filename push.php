@@ -9,16 +9,10 @@
 * Use: echo pull();
 */
  
-function pull ( )
-{
-echo "wht p";
-header();
-  return shell_exec('git pull origin master');
-   
 
-}
+   echo "wht p";
+   header();
+   echo shell_exec('git pull origin master'); 
 
-echo "<pre>" . pull() ;
-echo shell_exec('git status')
-. "</pre>";
+echo shell_exec('git status');
 ?>
