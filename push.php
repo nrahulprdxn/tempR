@@ -4,6 +4,8 @@
 * Git Pull
 */
  
-   echo shell_exec('git pull origin master'); 
+exec('git pull origin master', $shell_output, $output);
+print_r($shell_output);
+print_r($output);
 
 ?>
