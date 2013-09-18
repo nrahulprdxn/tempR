@@ -4,7 +4,7 @@
 * Git Pull
 */
  
-   echo shell_exec('sudo git pull origin master'); 
+   echo shell_exec('git pull origin master') . "<br /><br />"; 
 
-   echo shell_exec('sudo git status');
+   echo shell_exec('git status');
 ?>
