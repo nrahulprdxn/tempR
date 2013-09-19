@@ -44,8 +44,8 @@ if(isset ($_POST['one'])){
 } 
 elseif(isset ($_POST['two'])){
   
-  exec('DROP ALL TABLES', $shell_output, $output);
-  print_r($shell_output);
+  echo $op = $mysqli->query("DROP ALL TABLES");
+  
 
 } 
 elseif(isset ($_POST['three'])){
