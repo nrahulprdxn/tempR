@@ -49,7 +49,9 @@ elseif(isset ($_POST['two'])){
 } 
 elseif(isset ($_POST['three'])){
 
-  exec("cd ..");
+  exec("cd ..", $a, $b);
+  print_r($a);
+  
   exec("source webvantage.sql;", $s_op, $op);
   print_r($s_op);
   
