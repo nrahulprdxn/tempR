@@ -8,7 +8,7 @@
     <div style="width: 960px; color: #ff4; border: 1px dotted red; margin: 0 auto">
       <form method="post" action="" >
         <input type="submit" value="Check Out" name="one"/>
-        <input type="submit" value="TBD" name="two"/>
+        <input type="submit" value="Drop Database" name="two"/>
         <input type="submit" value="TBD" name="three"/>
       </form>
   
@@ -21,6 +21,14 @@
 /**
 * Git Pull
 */
+$host = getenv("IP");            // Set host name of database
+$username = 'nrahulprdxn';      // Set database username
+$password = '';                // Set database password
+$dbname = 'c9';               // Set database name
+$dbpre = 'in';               // Set table prefix
+
+$mysqli = new mysqli($host, $username, $password, $dbname);
+
 if(isset ($_POST['one'])){
   
   exec('git pull origin master', $shell_output, $output);
@@ -36,7 +44,7 @@ if(isset ($_POST['one'])){
 } 
 elseif(isset ($_POST['two'])){
   
-  echo $_POST['two'];
+  exec('DROP ALL TABLES', $shell_output, $output);
 
 } 
 elseif(isset ($_POST['three'])){
@@ -53,13 +61,7 @@ elseif(isset ($_POST['three'])){
  * Database actions
  * 
  */
-$host = getenv("IP");            // Set host name of database
-$username = 'nrahulprdxn';      // Set database username
-$password = '';                // Set database password
-$dbname = 'c9';               // Set database name
-$dbpre = 'in';               // Set table prefix
 
-$mysqli = new mysqli($host, $username, $password, $dbname);
 
 $q = "SHOW TABLES";
 $op = $mysqli->query($q);
