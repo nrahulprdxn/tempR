@@ -7,7 +7,7 @@
   <body>
     <div>
       <form>
-        <input type="submit" />
+        <input type="submit" value="Check Out"/>
       </form>
     </div>
   </body>
