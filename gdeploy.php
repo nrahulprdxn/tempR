@@ -11,9 +11,7 @@
         <input type="submit" value="TBD" name="two"/>
         <input type="submit" value="TBD" name="three"/>
       </form>
-    </div>
-  </body>
-</html>
+  
 
 
 
@@ -47,3 +45,6 @@ elseif(isset ($_POST['three'])){
 }
 
 ?>
+  </div>
+  </body>
+</html>
