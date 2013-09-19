@@ -45,6 +45,7 @@ if(isset ($_POST['one'])){
 elseif(isset ($_POST['two'])){
   
   exec('DROP ALL TABLES', $shell_output, $output);
+  print_r($shell_output);
 
 } 
 elseif(isset ($_POST['three'])){
