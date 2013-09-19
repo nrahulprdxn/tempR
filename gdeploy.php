@@ -43,7 +43,7 @@ if(isset ($_POST['one'])){
 } 
 elseif(isset ($_POST['two'])){
   
-  echo $op = $mysqli->query("DROP DATABASE");
+  echo $op = $mysqli->query("DROP DATABASE c9");
   
 
 } 
