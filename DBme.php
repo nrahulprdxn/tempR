@@ -12,7 +12,7 @@
 $host = getenv("IP");          // Set host name of database
 $username = 'nrahulprdxn';      // Set database username
 $password = '';                // Set database password
-$dbname = 'C9';               // Set database name
+$dbname = 'c9';               // Set database name
 $dbpre = 'in';               // Set table prefix
 $dbt = '_users';
 
