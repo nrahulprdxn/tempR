@@ -31,7 +31,7 @@ if(isset ($_POST['one'])){
   print_r($shell_output);
   
   echo "<br /><br />";
-  print_r($_POST);
+ echo $_POST['one'];
   
 } 
 elseif(isset ($_POST['two'])){
