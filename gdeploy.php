@@ -10,6 +10,7 @@
         <input type="submit" value="Check Out" name="one"/>
         <input type="submit" value="Drop Database" name="two"/>
         <input type="submit" value="Import SQL" name="three"/>
+         <input type="submit" value="Import SQL" name="four"/>
       </form>
   
 
