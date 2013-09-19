@@ -6,7 +6,7 @@
   </head>
   <body>
     <div>
-      <form method="post" action="">
+      <form method="post" action="" style="width: 960px; color: #ff4; border: 1px dotted red">
         <input type="submit" value="Check Out" name="one"/>
         <input type="submit" value="TBD" name="two"/>
         <input type="submit" value="TBD" name="three"/>
