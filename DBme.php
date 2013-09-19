@@ -1,10 +1,28 @@
 <?php
 
-$link = mysql_connect(getenv('IP'),'nrahulprdxn',''); 
-if (!$link) { 
-	die('Could not connect to MySQL: ' . mysql_error()); 
-}
-echo 'Connected successfully';
+/* Set database variables here for localhost*/
+//$host = 'localhost';         // Set host name of database
+//$username = 'root';         // Set database username
+//$password = '';            // Set database password
+//$dbname = 'webvantage';   // Set database name
+//$dbpre = 'in';           // Set table prefix
+//$dbt = '_users';
 
-echo "OKies " . getenv('IP');
+/* Set database variables here for C9*/
+$host = 'getenv("IP")';          // Set host name of database
+$username = 'nrahulprdxn';      // Set database username
+$password = '';                // Set database password
+$dbname = 'C9';               // Set database name
+$dbpre = 'in';               // Set table prefix
+$dbt = '_users';
+
+/* Connection to database */
+$mysqli = new mysqli($host, $username, $password, $dbname);
+
+ $q = 'SELECT * FROM '. $dbpre . $dbt;
+   
+ $result = $mysqli->query( $q );
+ while($row = mysqli_fetch_array($result)) : 
+   print_r($row);
+ endwhile;  
 ?>
