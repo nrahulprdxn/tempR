@@ -5,8 +5,8 @@
     </title>
   </head>
   <body>
-    <div>
-      <form method="post" action="" style="width: 960px; color: #ff4; border: 1px dotted red">
+    <div style="width: 960px; color: #ff4; border: 1px dotted red; margin: 0 auto">
+      <form method="post" action="" >
         <input type="submit" value="Check Out" name="one"/>
         <input type="submit" value="TBD" name="two"/>
         <input type="submit" value="TBD" name="three"/>
