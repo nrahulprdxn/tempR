@@ -57,8 +57,10 @@ $dbpre = 'in';               // Set table prefix
 $mysqli = new mysqli($host, $username, $password, $dbname);
 
 $q = "SHOW TABLES";
-$op = $mysqli->prepare("SHOW TABLES");
-print_r($op);
+$op = $mysqli->query($q);
+while ($row = mysql_fetch_row($op)) {
+   print_r($row);
+}
 
 
 ?>
