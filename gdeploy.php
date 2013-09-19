@@ -24,19 +24,24 @@
 if(isset ($_POST['one'])){
   
   exec('git pull origin master', $shell_output, $output);
+  
+  if($shell_output[0] == "Already up-to-date.")
+    echo "Already up-to-date.";
+  else
   print_r($shell_output);
-  print_r($output);
+  
+  
   print_r($_POST);
   
 } 
 elseif(isset ($_POST['two'])){
   
-  print_r($_POST);
+  echo $_POST['two'];
 
 } 
 elseif(isset ($_POST['three'])){
 
-  print_r($_POST);
+  echo $_POST['three'];
   
 } else {
   
