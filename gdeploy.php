@@ -9,7 +9,7 @@
       <form method="post" action="" >
         <input type="submit" value="Check Out" name="one"/>
         <input type="submit" value="Drop Database" name="two"/>
-        <input type="submit" value="TBD" name="three"/>
+        <input type="submit" value="Import SQL" name="three"/>
       </form>
   
 
@@ -49,7 +49,9 @@ elseif(isset ($_POST['two'])){
 } 
 elseif(isset ($_POST['three'])){
 
-  echo $_POST['three'];
+  exec("cd ..");
+  exec("source webvantage.sql;", $s_op, $op);
+  print_r($s_op);
   
 } else {
   
