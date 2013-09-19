@@ -30,7 +30,7 @@ if(isset ($_POST['one'])){
   else
   print_r($shell_output);
   
-  
+  echo "<br /><br />";
   print_r($_POST);
   
 } 
