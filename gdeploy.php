@@ -36,7 +36,7 @@ if(isset ($_POST['one'])){
   if($shell_output[0] == "Already up-to-date.")
     echo "Already up-to-date.";
   else
-  print_r($shell_output);
+    print_r($shell_output);
   
   echo "<br /><br />";
   
@@ -66,16 +66,14 @@ elseif(isset ($_POST['three'])){
  * 
  */
 
-
 $q = "SHOW TABLES";
 $op = $mysqli->query($q);
 echo "<p style='color: #fff'>List of Tables</p>";
 while ($row = mysqli_fetch_array($op)) {
   
-   echo $row['Tables_in_c9'] . ".<br />";
+   echo $row['Tables_in_c9'] . "<br />";
    
 }
-
 
 ?>
   </div>
