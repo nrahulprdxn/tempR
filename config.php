@@ -1,7 +1,7 @@
 <?php
 
 /* Set base url or domain name here */
-$baseurl = 'http://localhost/webvantage/';
+$baseurl = 'https://temps-c9-nrahulprdxn.c9.io/';
 
 /* Set database variables here */
 $host = getenv("IP");            // Set host name of database
