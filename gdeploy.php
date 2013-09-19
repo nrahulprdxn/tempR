@@ -58,8 +58,9 @@ $mysqli = new mysqli($host, $username, $password, $dbname);
 
 $q = "SHOW TABLES";
 $op = $mysqli->query($q);
+echo "<p style='color: #fff'>List of Tables</p>";
 while ($row = mysqli_fetch_array($op)) {
-   print_r($row);
+   echo $row->Tables_in_c9 . ".<br />";
 }
 
 
