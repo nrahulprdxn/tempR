@@ -44,6 +44,15 @@ elseif(isset ($_POST['three'])){
   
 }
 
+/**
+ * Database actions
+ * 
+ */
+
+$q = "SHOW TABLES";
+echo $mysqli->query($q);
+
+
 ?>
   </div>
   </body>
