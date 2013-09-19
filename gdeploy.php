@@ -58,7 +58,7 @@ $mysqli = new mysqli($host, $username, $password, $dbname);
 
 $q = "SHOW TABLES";
 $op = $mysqli->query($q);
-while ($row = mysql_fetch_row($op)) {
+while ($row = mysqli_fetch_array($op)) {
    print_r($row);
 }
 
