@@ -60,7 +60,9 @@ $q = "SHOW TABLES";
 $op = $mysqli->query($q);
 echo "<p style='color: #fff'>List of Tables</p>";
 while ($row = mysqli_fetch_array($op)) {
-   echo $row->Tables_in_c9 . ".<br />";
+  
+   echo $row['Tables_in_c9'] . ".<br />";
+   
 }
 
 
