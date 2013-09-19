@@ -6,5 +6,5 @@ if (!$link) {
 }
 echo 'Connected successfully';
 
-echo "OKies";
+echo "OKies " . getenv('IP');
 ?>
