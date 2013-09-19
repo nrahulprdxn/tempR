@@ -9,7 +9,7 @@
 //$dbt = '_users';
 
 /* Set database variables here for C9*/
-$host = 'getenv("IP")';          // Set host name of database
+$host = getenv("IP");          // Set host name of database
 $username = 'nrahulprdxn';      // Set database username
 $password = '';                // Set database password
 $dbname = 'C9';               // Set database name
