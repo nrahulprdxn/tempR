@@ -50,11 +50,11 @@ elseif(isset ($_POST['two'])){
 } 
 elseif(isset ($_POST['three'])){
 
-  exec("cd _db", $a, $b);
+  exec("cd _db", $a, $b);  
   print_r($a);
   
-  exec("source webvantage.sql;", $s_op, $op);
-  print_r($s_op);
+  //exec("source webvantage.sql;", $s_op, $op);
+  //print_r($s_op);
   
 } else {
   
