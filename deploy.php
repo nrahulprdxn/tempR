@@ -7,10 +7,10 @@
   <body style="background-color: #000;">
     <div style="width: 960px; color: #ff4; border: 1px dotted red; margin: 0 auto">
       <form method="post" action="" >
-        <input type="submit" value="Check Out" name="one"/>
-        <input type="submit" value="Drop Database" name="two"/>
-        <input type="submit" value="Import SQL" name="three"/>
-         <input type="submit" value="Import SQL" name="four"/>
+        <input type="submit" value="Check Out" name="pull"/>
+        <input type="submit" value="Drop Database" name="dropdb"/>
+        <input type="submit" value="Import SQL" name="impdb"/>
+         <input type="submit" value="Export SQL" name="expdb"/>
       </form>
   
 
@@ -30,7 +30,7 @@ $dbpre = 'in';               // Set table prefix
 
 $mysqli = new mysqli($host, $username, $password, $dbname);
 
-if(isset ($_POST['one'])){
+if(isset ($_POST['pull'])){
   
   exec('git pull origin master', $shell_output, $output);
   
@@ -42,13 +42,24 @@ if(isset ($_POST['one'])){
   echo "<br /><br />";
   
 } 
-elseif(isset ($_POST['two'])){
+elseif(isset ($_POST['dropdb'])){
   
-  echo $op = $mysqli->query("DROP DATABASE c9");
-  
+  $mysqli->query("DROP DATABASE c9");
+  $mysqli->query("CREATE DATABASE c9");
 
 } 
-elseif(isset ($_POST['three'])){
+elseif(isset ($_POST['impdb'])){
+
+  exec("cd _db");
+  exec("mysql-ctl cli");
+  exec("use c9;");
+  exec("source webvantage.sql;", $as);
+  print_r($as);
+  
+  //exec("source webvantage.sql;", $s_op, $op);
+  //print_r($s_op);
+  
+}elseif(isset ($_POST['impdb'])){
 
   exec("cd _db", $a, $b);  
   print_r($a);
@@ -56,7 +67,11 @@ elseif(isset ($_POST['three'])){
   //exec("source webvantage.sql;", $s_op, $op);
   //print_r($s_op);
   
-} else {
+}elseif(isset ($_POST['expdb'])){
+
+  
+}
+else {
   
   echo "Nothing selected";
   
