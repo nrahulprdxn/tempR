@@ -54,6 +54,7 @@ elseif(isset ($_POST['impdb'])){
   exec("mysql-ctl cli");
   exec("use c9;");
   exec("source webvantage.sql;", $as);
+  exec("exit;");
   print_r($as);
   
   //exec("source webvantage.sql;", $s_op, $op);
