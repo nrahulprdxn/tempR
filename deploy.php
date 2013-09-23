@@ -136,8 +136,8 @@ while ($row = mysqli_fetch_array($op)) {
 }
 echo '</ul>
   <div class="view-table">';
-while ($row = mysqli_fetch_array($op)) {
-  echo $q = "SELECT * FROM " . $row;
+while ($rows = mysqli_fetch_array($op)) {
+  echo $q = "SELECT * FROM " . $rows;
   $results = $mysqli->query($q);
   echo '<table>';
   if(count($results) > 0){
