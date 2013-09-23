@@ -135,8 +135,40 @@ while ($row = mysqli_fetch_array($op)) {
    
 }
 echo '</ul>
-  <div class="view-table"></div>
-</div>'
+  <div class="view-table">';
+while ($row = mysqli_fetch_array($op)) {
+  $q = "SELECT * FROM " . $row;
+  $results = $mysqli->query($q);
+  echo '<table>';
+  if(count($results) > 0){
+  	foreach ($results as $index => $result) {
+      if($index == 0){
+     echo '<tr class="dbtable_wrapper">';
+    
+      foreach ($result as $key => $value) {
+        
+        echo '<td class="user_id">'.$key .'</td>';
+        
+      }
+      echo '</tr>';
+    }
+      echo '<tr class="dbtable_wrapper">';
+    
+      foreach ($result as $key => $value) {
+        
+        echo '<td class="user_id">'.$value.'</td>';
+        
+      }
+      echo '</tr>';
+    }
+  }
+  else{
+    echo '<tr class="dbtable_wrapper"><td class="user_id">No data</td></tr>';
+  }
+   echo '</table>';
+}
+echo '</div>
+</div>';
 ?>
   </div>
   </body>
