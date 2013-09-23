@@ -136,8 +136,8 @@ while ($row = mysqli_fetch_array($op)) {
 
   echo '<div class="view-table">';
 
-  echo $q = "SELECT * FROM " . $row['Tables_in_c9'];
-  $results = $mysqli->query($q);
+  echo $qu = "SELECT * FROM " . $row['Tables_in_c9'];
+  $results = $mysqli->query($qu);
   echo '<table>';
   if(count($results) > 0){
   	foreach ( mysqli_fetch_array($results) as $index => $result) {
