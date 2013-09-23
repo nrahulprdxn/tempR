@@ -136,7 +136,7 @@ while ($row = mysqli_fetch_array($op)) {
 
   echo '<div class="view-table">';
 
-  echo $q = "SELECT * FROM " . $row;
+  echo $q = "SELECT * FROM " . $row['Tables_in_c9'];
   $results = $mysqli->query($q);
   echo '<table>';
   if(count($results) > 0){
