@@ -128,10 +128,10 @@ $q = "SHOW TABLES";
 $op = $mysqli->query($q);
 echo "<div class='table-list cf'>
   <p style='color: #fff'>List of Tables</p>
-      <ul>";
+      <div>";
 while ($row = mysqli_fetch_array($op)) {
   
-   echo "<li>".$row['Tables_in_c9'] . "</li>";
+   echo $row['Tables_in_c9'];
    
 
   echo '<div class="view-table">';
@@ -146,7 +146,7 @@ while ($row = mysqli_fetch_array($op)) {
     
       foreach ($result as $key => $value) {
         
-        echo '<td class="user_id">'.$key .'</td>';
+        echo '<td class="user_id">'. $key .'</td>';
         
       }
       echo '</tr>';
@@ -155,7 +155,7 @@ while ($row = mysqli_fetch_array($op)) {
     
       foreach ($result as $key => $value) {
         
-        echo '<td class="user_id">'.$value.'</td>';
+        echo '<td class="user_id">' . $value . '</td>';
         
       }
       echo '</tr>';
