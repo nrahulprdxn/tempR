@@ -137,11 +137,11 @@ while ($row = mysqli_fetch_array($op)) {
 echo '</ul>
   <div class="view-table">';
 while ($row = mysqli_fetch_array($op)) {
-  $q = "SELECT * FROM " . $row;
+  echo $q = "SELECT * FROM " . $row;
   $results = $mysqli->query($q);
   echo '<table>';
   if(count($results) > 0){
-  	foreach ($results as $index => $result) {
+  	foreach ( mysqli_fetch_array($results) as $index => $result) {
       if($index == 0){
      echo '<tr class="dbtable_wrapper">';
     
