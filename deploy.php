@@ -15,8 +15,20 @@
           cursor: pointer;
           text-align: center;
         }
-        .status{
-          
+        .status{ 
+          margin: 0 35px;
+          font-size: 20px;
+        }
+        p{   
+          margin: 5px 35px;
+          font-size: 18px;
+        }
+        ul{
+          width: 300px;
+          float: left;
+        }
+        li{
+          list-style: none;
         }
     </style>
   </head>
@@ -54,8 +66,7 @@ if(isset ($_POST['pull'])){
     echo "<p class='status'>Already up-to-date.</p>";
   else
     print_r($shell_output);
-  
-  echo "<br /><br />";
+
   
 } 
 elseif(isset ($_POST['dropdb'])){
@@ -101,13 +112,14 @@ else {
 
 $q = "SHOW TABLES";
 $op = $mysqli->query($q);
-echo "<p style='color: #fff'>List of Tables</p>";
+echo "<p style='color: #fff'>List of Tables</p>
+      <ul>";
 while ($row = mysqli_fetch_array($op)) {
   
-   echo $row['Tables_in_c9'] . "<br />";
+   echo "<li>".$row['Tables_in_c9'] . "</li>";
    
 }
-
+echo '</ul>'
 ?>
   </div>
   </body>
