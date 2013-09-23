@@ -4,8 +4,17 @@
       Deploy From Git
     </title>
     <style>
-      
-        form {
+      .cf:before,
+      .cf:after {
+        content: " ";
+        display: table;
+      }
+
+      .cf:after { clear: both; }
+
+      .cf { *zoom: 1; }
+
+      form {
             margin: 40px;
             text-align: center;
         }
@@ -101,7 +110,7 @@ elseif(isset ($_POST['impdb'])){
 }
 else {
   
-  echo "Nothing selected";
+  echo "<p class='status'>Nothing selected</p>";
   
 }
 
