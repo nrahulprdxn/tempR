@@ -128,15 +128,17 @@ $q = "SHOW TABLES";
 $op = $mysqli->query($q);
 echo "<div class='table-list cf'>
   <p style='color: #fff'>List of Tables</p>
-      <div>";
+      <ul>";
 while ($row = mysqli_fetch_array($op)) {
   
    echo "<li>".$row['Tables_in_c9'] . "</li>";
    
-
-echo '<div class="view-table">';
- 
-  echo $q = "SELECT * FROM " . $row['Tables_in_c9'];
+}
+echo '</ul>
+  <div class="view-table">';
+while ($rows = mysqli_fetch_array($op)) {
+  
+ echo $q = "SELECT * FROM " . $rows['Tables_in_c9'];
   $results = $mysqli->query($q);
   echo '<table>';
   if(count($results) > 0){
@@ -167,7 +169,7 @@ echo '<div class="view-table">';
    echo '</table>';
 }
 echo '</div>
-</div></div>';
+</div>';
 ?>
   </div>
   </body>
