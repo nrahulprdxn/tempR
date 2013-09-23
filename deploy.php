@@ -39,6 +39,11 @@
         li{
           list-style: none;
         }
+        .view-table{
+          width: 60px;
+          margin: 0 0 0 20px;
+          float: left;
+        }
     </style>
   </head>
   <body style="background-color: #000;">
@@ -121,14 +126,17 @@ else {
 
 $q = "SHOW TABLES";
 $op = $mysqli->query($q);
-echo "<p style='color: #fff'>List of Tables</p>
+echo "<div class='table-list cf'>
+  <p style='color: #fff'>List of Tables</p>
       <ul>";
 while ($row = mysqli_fetch_array($op)) {
   
    echo "<li>".$row['Tables_in_c9'] . "</li>";
    
 }
-echo '</ul>'
+echo '</ul>
+  <div class="view-table"></div>
+</div>'
 ?>
   </div>
   </body>
