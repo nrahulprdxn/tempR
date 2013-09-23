@@ -3,6 +3,22 @@
     <title>
       Deploy From Git
     </title>
+    <style>
+      
+        form {
+            margin: 40px;
+            text-align: center;
+        }
+        
+        input {
+          margin: 0 0 0 30px;
+          cursor: pointer;
+          text-align: center;
+        }
+        .status{
+          
+        }
+    </style>
   </head>
   <body style="background-color: #000;">
     <div style="width: 960px; color: #ff4; border: 1px dotted red; margin: 0 auto">
@@ -35,7 +51,7 @@ if(isset ($_POST['pull'])){
   exec('git pull origin master', $shell_output, $output);
   
   if($shell_output[0] == "Already up-to-date.")
-    echo "Already up-to-date.";
+    echo "<p class='status'>Already up-to-date.</p>";
   else
     print_r($shell_output);
   
