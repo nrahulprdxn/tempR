@@ -133,12 +133,10 @@ while ($row = mysqli_fetch_array($op)) {
   
    echo "<li>".$row['Tables_in_c9'] . "</li>";
    
-}
-echo '</ul>
-  <div class="view-table">';
-while ($rows = mysqli_fetch_array($op)) {
-  
- echo $q = "SELECT * FROM " . $rows['Tables_in_c9'];
+
+  echo '<div class="view-table">';
+
+  echo $q = "SELECT * FROM " . $rows;
   $results = $mysqli->query($q);
   echo '<table>';
   if(count($results) > 0){
@@ -169,7 +167,7 @@ while ($rows = mysqli_fetch_array($op)) {
    echo '</table>';
 }
 echo '</div>
-</div>';
+</div></div>';
 ?>
   </div>
   </body>
