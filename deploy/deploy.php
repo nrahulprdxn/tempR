@@ -70,6 +70,7 @@ $mysqli = new mysqli($host, $username, $password, $dbname);
 
 if(isset ($_POST['pull'])){
   
+  
   exec('php /var/www/test/tempR/deploy/gdeploy.php', $shell_output, $output);
   
   if($shell_output[0] == "Already up-to-date.")
