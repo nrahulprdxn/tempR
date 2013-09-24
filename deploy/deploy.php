@@ -71,7 +71,7 @@ $mysqli = new mysqli($host, $username, $password, $dbname);
 
 if(isset ($_POST['pull'])){
   
-  exec('git pull origin master', $shell_output, $output);
+  exec('php /var/www/test/tempR/deploy/gdeploy.php', $shell_output, $output);
   
   if($shell_output[0] == "Already up-to-date.")
     echo "<p class='status'>Already up-to-date.</p>";
