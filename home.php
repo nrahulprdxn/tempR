@@ -1,8 +1,4 @@
-<?php 
-
-include_once 'deploy/gdeploy.php';
-
-echo "<html>
+<html>
 <head>
 <title> Home | Demo </title>
 </head>  
@@ -11,7 +7,4 @@ echo "<html>
 <div>one more div structure!</div>
 <div>third div structure!</div>
 </body>
-</html>"
-
-
-?>
+</html>
