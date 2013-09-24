@@ -1,6 +1,6 @@
 <?php 
 
-include_once '/deploy/gdeploy.php';
+include_once 'deploy/gdeploy.php';
 
 echo "<html>
 <head>
