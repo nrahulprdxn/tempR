@@ -10,7 +10,7 @@
  
 	// The commands
 	$commands = array(
-		'echo prdxn2012',
+		'echo $PWD',
       'git status',
 		'whoami',
 		'git pull',
