@@ -1,11 +1,22 @@
-<?php
+
   
-exec('cd var/www/test/tempR');  
-exec('sudo git pull origin master 2>&1; prdxn2012', $retval, $output);
-echo trim(shell_exec('whoami'));
-//system('echo "prdxn2012" | sudo -u user -S git pull origin master 2>&1', $retval);
+      <form method="post" action="" >       
+        <input type="submit" value="Check Out" name="pull"/>      
+      </form>
 
-echo $retval;
-
+<?php
+  if(isset ($_POST['pull'])){
+    
+  exec('cd ..; git pull', $shell_output, $output);
+  
+  if($shell_output[0] == "Already up-to-date.")
+    
+    echo "<p class='status'>Already up-to-date.</p>";
+  
+  else
+    var_dumb($shell_output);
+  
+    
+  }
 ?>
   

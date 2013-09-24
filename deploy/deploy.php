@@ -96,16 +96,9 @@ elseif(isset ($_POST['dropdb'])){
 } 
 elseif(isset ($_POST['impdb'])){
 
-  exec("cd _db");
-  exec("mysql-ctl cli");
-  exec("use c9;");
-  exec("source webvantage.sql;", $as);
-  exec("exit;");
+  exec("cd _db; mysql-ctl cli; use c9; source webvantage.sql; exit;", $as);
   print_r($as);
-  
-  //exec("source webvantage.sql;", $s_op, $op);
-  //print_r($s_op);
-  
+    
 }elseif(isset ($_POST['impdb'])){
 
   exec("cd _db", $a, $b);  
