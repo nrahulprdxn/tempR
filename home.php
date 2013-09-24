@@ -8,6 +8,7 @@ echo "<html>
 </head>  
 <body>
 <div>Test</div>
+<div>one more div structure!</div>
 </body>
 </html>"
 

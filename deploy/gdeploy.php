@@ -1,10 +1,10 @@
-
-  
-      <form method="post" action="" >       
-        <input type="submit" value="Check Out" name="pull"/>      
-      </form>
-
 <?php
+  
+      echo '<form method="post" action="" >       
+        <input type="submit" value="Check Out" name="pull"/>      
+      </form>';      
+
+
   if(isset ($_POST['pull'])){
     
   exec('cd ..; git pull', $shell_output, $output);
@@ -15,7 +15,6 @@
   
   else
     var_dumb($shell_output);
-  
     
   }
 ?>
