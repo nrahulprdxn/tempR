@@ -78,7 +78,7 @@ if(isset ($_POST['cloneme'])){
 }elseif(isset ($_POST['pull'])){
   
   
-  exec('php /var/www/test/tempR/deploy/gdeploy.php', $shell_output, $output);
+  exec('cd ..; git pull', $shell_output, $output);
   
   if($shell_output[0] == "Already up-to-date.")
     echo "<p class='status'>Already up-to-date.</p>";
