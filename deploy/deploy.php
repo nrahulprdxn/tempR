@@ -66,7 +66,6 @@ $dbpre = 'in';               // Set table prefix
 * Git Pull
 */
 
-
 $mysqli = new mysqli($host, $username, $password, $dbname);
 
 if(isset ($_POST['pull'])){
