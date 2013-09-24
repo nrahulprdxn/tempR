@@ -56,6 +56,9 @@ $dbpre = 'in';               // Set table prefix
   <body style="background-color: #000;">
     <div style="width: 960px; color: #ff4; border: 1px dotted red; margin: 0 auto">
       <form method="post" action="" >
+        <lable name="cloneurl">Enter git url </lable>
+        <input name="urlclone" type="text" />
+        <input type="submit" value="Clone" name="cloneme"/>
         <input type="submit" value="Check Out" name="pull"/>
         <input type="submit" value="Drop Database" name="dropdb"/>
         <input type="submit" value="Import SQL" name="impdb"/>
