@@ -71,7 +71,11 @@ $dbpre = 'in';               // Set table prefix
 
 $mysqli = new mysqli($host, $username, $password, $dbname);
 
-if(isset ($_POST['pull'])){
+if(isset ($_POST['cloneme'])){
+  
+  echo $_POST['urlclone'];
+
+}elseif(isset ($_POST['pull'])){
   
   
   exec('php /var/www/test/tempR/deploy/gdeploy.php', $shell_output, $output);
