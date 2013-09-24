@@ -1,3 +1,10 @@
+<?php
+$host = getenv("IP");            // Set host name of database
+$username = 'nrahulprdxn';      // Set database username
+$password = '';                // Set database password
+$dbname = 'c9';               // Set database name
+$dbpre = 'in';               // Set table prefix
+?>
 <html>
   <head>
     <title>
@@ -54,21 +61,11 @@
         <input type="submit" value="Import SQL" name="impdb"/>
          <input type="submit" value="Export SQL" name="expdb"/>
       </form>
-  
-
-
-
-
-
 <?php 
 /**
 * Git Pull
 */
-$host = getenv("IP");            // Set host name of database
-$username = 'nrahulprdxn';      // Set database username
-$password = '';                // Set database password
-$dbname = 'c9';               // Set database name
-$dbpre = 'in';               // Set table prefix
+
 
 $mysqli = new mysqli($host, $username, $password, $dbname);
 
