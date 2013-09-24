@@ -73,7 +73,8 @@ $mysqli = new mysqli($host, $username, $password, $dbname);
 
 if(isset ($_POST['cloneme'])){
   
-  echo $_POST['urlclone'];
+  exec("git clone " . $_POST['urlclone'], $shell_output, $output);
+  print_r($shell_output);
 
 }elseif(isset ($_POST['pull'])){
   
